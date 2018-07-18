@@ -20,7 +20,7 @@
        <repository>
            <id>test</id>
            <name>mediaView-releases</name>
-           <url>http://192.168.241.134:8081/artifactory/test</url>
+           <url>http://192.168.81.141:8081/artifactory/example-repo-local</url>
        </repository>
     </distributionManagement>
 
