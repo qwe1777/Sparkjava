@@ -16,6 +16,13 @@
 			<version>2.3</version>
 		</dependency>
 	</dependencies>
+    <distributionManagement>
+       <repository>
+           <id>test</id>
+           <name>mediaView-releases</name>
+           <url>http://192.168.241.134:8081/artifactory/test</url>
+       </repository>
+    </distributionManagement>
 
 	<build>
 		<plugins>
