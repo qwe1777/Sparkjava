@@ -9,7 +9,7 @@
 	<version>1.0</version>
 	<packaging>war</packaging>
 	<build>
-        	<finalName>WhatEverYouLikey</finalName>
+        	
         </build>
 
 	<dependencies>
@@ -54,6 +54,7 @@
 									<version>[1.8,)</version>
 								</requireJavaVersion>
 							</rules>
+							<finalName>WhatEverYouLikey</finalName>
 						</configuration>
 					</execution>
 				</executions>
