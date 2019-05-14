@@ -6,7 +6,7 @@
 
 	<groupId>sparkjava-hello-world</groupId>
 	<artifactId>sathish</artifactId>
-	<version>1.0</version>
+	<version>${env.BUILD_NUMBER}</version>
 	<packaging>war</packaging>
 	
 
