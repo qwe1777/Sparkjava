@@ -5,8 +5,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>sparkjava-hello-world</groupId>
-	<artifactId>sathish${env.BUILD_NUMBER}</artifactId>
-	<!--<version>${env.BUILD_NUMBER}</version>-->
+	<artifactId>sathish</artifactId>
+	<version>${env.BUILD_NUMBER}</version>
 	<packaging>war</packaging>
 	
 
