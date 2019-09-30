@@ -5,9 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>sparkjava-hello-world</groupId>
-	<artifactId>sparkjava-hello-world</artifactId>
-	<version>1.0</version>
+	<artifactId>sathish</artifactId>
+	<version>${env.BUILD_NUMBER}</version>
 	<packaging>war</packaging>
+	
 
 	<dependencies>
 		<dependency>
@@ -51,6 +52,7 @@
 									<version>[1.8,)</version>
 								</requireJavaVersion>
 							</rules>
+							
 						</configuration>
 					</execution>
 				</executions>
