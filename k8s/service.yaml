@@ -1,10 +1,11 @@
-kind: kind: Service
+kind: Service
 apiVersion: v1
 metadata:
   name:  sparkjava-svc
+  namespace: sparkjava
 spec:
   selector:
-    app:  saprkjava
+    app:  sparkjava
   type:  ClusterIP 
   ports:
   - name:  sparkjava
