@@ -10,13 +10,14 @@ spec:
       maxSurge: 1
       maxUnavailable: 1
     type: RollingUpdate
+  replicas: 3
   template:
     metadata:
       labels:
         name:  sparkjava
     spec:
       containers:
-      - image:  ecrurl 
+      - image:  639072867504.dkr.ecr.us-east-2.amazonaws.com/sparkjava:8
         name:  sparkjava
         resources:
           requests:
