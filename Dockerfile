@@ -15,5 +15,7 @@ COPY . /code
 RUN mvn clean package
 
 FROM tomcat 
-COPY --from=development /code/targets/sparkjava-hello-world-1.0.war  /usr/local/tomcat/webapps/ 
+COPY --from=development /code/target/sparkjava-hello-world-1.0.war  /usr/local/tomcat/webapps/ 
+
+
 
