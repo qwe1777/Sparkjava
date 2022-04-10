@@ -1,6 +1,6 @@
 FROM maven as war-build 
 WORKDIR /code 
-COPY . ./code  
+COPY . /code  
 RUN mvn clean package
 
 
