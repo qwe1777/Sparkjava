@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    stages {
+        stage(Building Master branch){
+            when {
+                branch 'master'
+            }
+            steps {
+                mvn clean compile
+            }
+            steps {
+                mvn clean pacakge
+            }
+        }
+        stage (Building develop branch) {
+            when {
+                branch 'develop'
+            }
+            steps {
+                mvn clean compile
+            }
+            steps {
+                mvn clean install
+            }
+        }
+
+    }
+}
