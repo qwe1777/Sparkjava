@@ -1,23 +1,32 @@
 pipeline {
     agent any
+
     stages {
-        stage('Building Master branch'){
-            when {
-                branch 'master'
-            }
+        stage('Build') {
             steps {
                 mvn clean compile
             }
-            
-        stage ('Building develop branch') {
+        }
+        stage('Test') {
+            steps {
+                mvn clean compile
+            }
+        }
+        stage('Deliver for development') {
             when {
                 branch 'develop'
             }
             steps {
-                mvn clean install
-            }            
+                mvn clean package
+            }
         }
-
+        stage('Deploy for production') {
+            when {
+                branch 'master'
+            }
+            steps {
+                mvn clean install
+            }
+        }
     }
-}
 }
