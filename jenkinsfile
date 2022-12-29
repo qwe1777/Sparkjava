@@ -15,9 +15,9 @@ pipeline {
             }
             steps {
                 mvn clean install
-            }
-            
+            }            
         }
 
     }
+}
 }
