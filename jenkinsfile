@@ -8,20 +8,15 @@ pipeline {
             steps {
                 mvn clean compile
             }
-            steps {
-                mvn clean pacakge
-            }
-        }
+            
         stage ('Building develop branch') {
             when {
                 branch 'develop'
             }
             steps {
-                mvn clean compile
-            }
-            steps {
                 mvn clean install
             }
+            
         }
 
     }
