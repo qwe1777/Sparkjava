@@ -12,6 +12,11 @@ pipeline {
                 sh 'mvn clean compile'
             }
         }
+        stage('Temp') {
+            steps {
+                sh 'mvn clean compile'
+            }
+        }
         stage('Deliver for development') {
             when {
                 branch 'develop'
