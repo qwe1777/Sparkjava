@@ -35,7 +35,7 @@ pipeline {
             }
                 
             steps {
-echo "This is testing branch"            }
+echo "This is Development branch"            }
         }
     }
 }
