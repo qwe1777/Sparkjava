@@ -26,11 +26,19 @@ pipeline {
             }
         }
         stage('Deploy to Production') {
+            environment {
+                TOMCAT_URL = 'http://54.255.187.52:8080'
+                TOMCAT_USER = 'tomcat'
+                TOMCAT_PASSWORD = 'tomcat'
+         
+            }
             when {
                 branch 'production'
             }
+                
             steps {
                 sh 'mvn deploy'
+                sh "curl --upload-file /home/ubuntu/Projects/java-war-example-HelloWorld/target*.war ${TOMCAT_URL}/manager/deploy?path=sparkjava-hello-world-1.0 -u ${TOMCAT_USER}:${TOMCAT_PASSWORD}"
             }
         }
     }
