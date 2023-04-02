@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Deploy to Production') {
             environment {
-                TOMCAT_URL = 'http://54.255.187.52:8080'
+                TOMCAT_URL = 'http://3.0.176.113:8080'
                 TOMCAT_USER = 'tomcat'
                 TOMCAT_PASSWORD = 'tomcat'
          
