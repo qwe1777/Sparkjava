@@ -1,4 +1,4 @@
 FROM  open jdk11
-LABEL maintainer="Ruksana92"
-COPY /target/sparkjava-war-example /home/sparkjava-war-example 
-CMD ["java","-jar","/home/sparkjava-war-example"]
+COPY  target/*.war/
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/home/sparkjava-war-example"]
