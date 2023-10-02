@@ -1,0 +1,8 @@
+FROM jenkins:jdk11
+
+MAINTAINER Ruksana92
+
+COPY target/sparkjava-war-example /usr/local/tomcat/webapps/ROOT.war
+
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
