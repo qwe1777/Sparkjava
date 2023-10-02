@@ -19,7 +19,8 @@ pipeline {
     stage('Docker Push') {
     	agent any
       steps {
-      	withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'dockerhub', usernameVariable: 'dockerHubUser')]) {
+      	withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerhub')]) 
+     {
         	sh "docker login -u Ruksana92 -p ${dockerhub} "
           sh 'docker push spark1/sparkjava-war-example'
         }
