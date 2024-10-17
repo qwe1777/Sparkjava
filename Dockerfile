@@ -1,2 +1,2 @@
 FROM tomcat:latest
-COPY ./*.war /usr/local/tomcat/webapps
+COPY /var/lib/jenkins/workspace/test1@2/target/sparkjava-hello-world-1.0.war /usr/local/tomcat/webapps
