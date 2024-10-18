@@ -1,2 +1,2 @@
-FROM tomcat:9.0.96-jdk8-corretto-al2
-COPY /target/sparkjava-hello-world-1.0.war /var/lib/tomcat9/webapps
+FROM dockerbase/tomcat8:latest
+COPY /target/sparkjava-hello-world-1.0.war /var/lib/tomcat8/webapps
