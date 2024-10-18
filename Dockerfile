@@ -1,2 +1,2 @@
-FROM tomcat:latest
-COPY /target/sparkjava-hello-world-1.0.war /usr/local/tomcat/webapps
+FROM tomcat:9-jdk17-corretto-al2
+COPY /target/sparkjava-hello-world-1.0.war /var/lib/tomcat
